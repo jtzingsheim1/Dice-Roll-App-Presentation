@@ -14,13 +14,17 @@ Specialization on Coursera. The instructions say to create an application using
 `shiny` and then create a presentation pitching the app.
 
 To meet the objective an application was created which is a game where the user
-can place wagers on the outcome of a roll of two dice. The repo for the app is
-[here][1].
+can place wagers on the outcome of a roll of two dice. The `shiny` application
+and this presentation were created in Rstudio.
+ - The repo for the app is [here][1].
+ - The app is hosted on shinyapps.io [here][2] (accessible as monthly active
+ hours allow)
 
-[1]: https://github.com/jtzingsheim1/Dice-Roll-Application "GitHub repo"
+[1]: https://github.com/jtzingsheim1/Dice-Roll-Application "GitHub repo for app"
+[2]: https://jtzingsheim.shinyapps.io/Dice_Roll_Game/  "shinyapps.io"
 
 
-User Interface
+User Interface (Image Only)
 ========================================================
 
 ![UI Screenshot](UI_Screenshot.png)
@@ -29,11 +33,12 @@ User Interface
 Server Logic
 ========================================================
 
-A small excerpt of the server logic code is shown below. In a different part of
-the server logic it also selects the appropriate images to display. The actual
-server code for die1 is shown below, but is not evaluated here. The code that is
-run to produce the dice images on this slide is hidden, but it is a slightly
-modified version of the same server code.
+The excerpt of the server logic code where the dice are rolled is shown below.
+In a different part of the server logic, the app selects the appropriate images
+to display. The actual server code for `die1` is shown below, but is not
+evaluated here. The code that is run to produce the dice images on this slide is
+hidden, but it is a slightly modified version of the same server code. In this
+slide, just like in the actual application, the seed is intentionally not set.
 
 
 ```r
@@ -53,7 +58,17 @@ output$die1 <- renderImage({
 }, deleteFile = FALSE)
 ```
 
+<img src="die_images/die1.png" title="plot of chunk server3" alt="plot of chunk server3" width="10%" /><img src="die_images/die1.png" title="plot of chunk server3" alt="plot of chunk server3" width="10%" />
 
 
+Sales Pitch
+========================================================
 
+This is a good app because:
+ - It is fun to play
+ - It allows users to have a gambling like experience in a safe environment
+ - Users can apply their statistics knowledge to exploit the payouts and win big
+ - It is a creative solution to the project requirements
+ 
+Thanks for your time, I hope you enjoyed using the app.
 
