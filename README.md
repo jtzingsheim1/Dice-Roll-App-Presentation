@@ -12,6 +12,8 @@ used for all parts of the project.
 [1]: https://www.coursera.org/learn/data-products  "Developing Data Products"
 [2]: https://www.coursera.org/specializations/jhu-data-science  "DS Spec."
 [3]: https://github.com/jtzingsheim1/Dice-Roll-Application "GitHub repo for app"
+[4]: https://jtzingsheim.shinyapps.io/Dice_Roll_Game/  "shinyapps.io"
+
 
 ## Brief Description
 
@@ -24,7 +26,8 @@ decided to make a simple game based on the rolling of two dice. The repo
 contains the Rpres file that was used to build the presentation along with the
 associated markdown file. The repo also contains folders and files for the
 images and figures used in the presentation. The presentation uses the R
-presentation feature within RStudio.
+presentation feature within RStudio. The application is hosted on shinyapps.io
+[here][4].
 
 
 ## Original Project Instructions
