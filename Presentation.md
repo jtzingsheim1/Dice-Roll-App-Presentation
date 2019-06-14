@@ -2,7 +2,9 @@ Pitch for Dice Roll! App
 ========================================================
 author: Justin Z
 date: June 12, 2019
-autosize: true
+autosize: TRUE
+
+Navigate using arrow keys or clicking arrow buttons in the lower right corner.
 
 
 Overview
@@ -33,32 +35,20 @@ User Interface (Image Only)
 Server Logic
 ========================================================
 
-The excerpt of the server logic code where the dice are rolled is shown below.
-In a different part of the server logic, the app selects the appropriate images
-to display. The actual server code for `die1` is shown below, but is not
-evaluated here. The code that is run to produce the dice images on this slide is
-hidden, but it is a slightly modified version of the same server code. In this
-slide, just like in the actual application, the seed is intentionally not set.
+A key feature of the server code is rolling the dice. A modified version of the
+actual code is shown and run below. Just like in the actual application, the
+seed is intentionally not set.
 
 
 ```r
-# Roll the dice
-die1 <- sample(1:6, 1)
-die2 <- sample(1:6, 1)
-dice.sum <- sum(die1, die2)
+# Roll the dice and display images
+dice <- sample(1:6, 2)
+filenames <- paste0("die", dice, ".png")
+filepaths <- file.path("die_images", filenames)
+knitr::include_graphics(filepaths)
 ```
 
-
-```r
-# Render the image for the first die
-output$die1 <- renderImage({
-    filename <- paste0("die", RollTheDice()$die1, ".png")
-    filepath <- normalizePath(file.path('./die_images', filename))
-    list(src = filepath, width = img.sz, height = img.sz)
-}, deleteFile = FALSE)
-```
-
-<img src="die_images/die1.png" title="plot of chunk server3" alt="plot of chunk server3" width="10%" /><img src="die_images/die1.png" title="plot of chunk server3" alt="plot of chunk server3" width="10%" />
+<img src="die_images/die5.png" title="plot of chunk server1" alt="plot of chunk server1" width="10%" /><img src="die_images/die2.png" title="plot of chunk server1" alt="plot of chunk server1" width="10%" />
 
 
 Sales Pitch
